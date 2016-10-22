@@ -156,3 +156,13 @@
   MaxClientsHandlerCli: delete: successful
   MaxClientsHandlerCli: apply: successful
   ```
+
+### Tests
+
+##### Unit test
+
+  - Coming Soon
+
+##### Binary test
+
+  - Coming Soon
