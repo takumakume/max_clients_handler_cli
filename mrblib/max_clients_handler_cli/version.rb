@@ -1,3 +1,7 @@
 module MaxClientsHandlerCli
-  VERSION = "0.0.1"
+  class << self
+    def version
+      "0.0.1"
+    end
+  end
 end

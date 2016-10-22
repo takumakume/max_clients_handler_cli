@@ -1,0 +1,2 @@
+config_store_yaml: "/access_limiter/max_clients_hander.yaml"
+config_store_lmc: "/access_limiter/max_clients_hander.lmc"

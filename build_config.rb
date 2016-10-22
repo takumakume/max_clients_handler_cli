@@ -5,6 +5,7 @@ def gem_config(conf)
   conf.gem :github => 'AndrewBelt/mruby-yaml'
   conf.gem :github => 'matsumoto-r/mruby-localmemcache'
   conf.gem :github => 'iij/mruby-iijson'
+  conf.gem :github => 'iij/mruby-env'
 
   # be sure to include this gem (the cli app)
   conf.gem File.expand_path(File.dirname(__FILE__))

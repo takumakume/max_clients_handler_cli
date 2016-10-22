@@ -1,0 +1,12 @@
+---
+/path/to/hoge.php:
+  max_clients: 2
+  time_slots:
+  - begin: 1000
+    end: 1200
+  - begin: 1900
+    end: 2100
+/path/to/foo.php:
+  max_clients: 2
+  time_slots: ~
+...
