@@ -1,5 +1,4 @@
 def gem_config(conf)
-  conf.gembox 'default'
   conf.gembox 'full-core'
   conf.gem :github => 'mttech/mruby-getopts'
   conf.gem :github => 'AndrewBelt/mruby-yaml'
@@ -12,7 +11,7 @@ def gem_config(conf)
 end
 
 MRuby::Build.new do |conf|
-  toolchain :clang
+  toolchain :gcc
 
   conf.enable_bintest
   conf.enable_debug

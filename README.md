@@ -66,7 +66,7 @@
 
     ```shell
     # 09:00 ~ 10:30 and 21:00 ~ 23:59
-    -t 900-1030,21:00~23:59
+    -t 900-1030,2100-2359
     ```
 
 ##### Optional global env
@@ -154,6 +154,13 @@
   ```shell
   $ max_clients_handler_cli -m delete -k /path/to/hoge.php
   MaxClientsHandlerCli: delete: successful
+  MaxClientsHandlerCli: apply: successful
+  ```
+
+###### apply
+
+  ```shell
+  $ max_clients_handler_cli -m apply
   MaxClientsHandlerCli: apply: successful
   ```
 
