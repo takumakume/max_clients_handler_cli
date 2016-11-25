@@ -97,6 +97,16 @@ module MaxClientsHandlerCli
       false
     end
 
+    def clear_counter key
+      begin
+        lmc = Cache.new :namespace => @@config["counter_store_lmc"]
+        lmc.delete(key)
+        lmc.close
+      rescue => e
+        raise "clear_counter: localmemcache delete error #{e}"
+      end
+    end
+
     def lmc_get opts
       unless opts.has_key?("k") && opts["k"]
         puts "lmc_get: -k options is required"
