@@ -97,10 +97,10 @@ module MaxClientsHandlerCli
       false
     end
 
-    def clear_counter key
+    def clear_counter opts
       begin
         lmc = Cache.new :namespace => @@config["counter_store_lmc"]
-        lmc.delete(key)
+        lmc.delete(opts["k"])
         lmc.close
       rescue => e
         raise "clear_counter: localmemcache delete error #{e}"

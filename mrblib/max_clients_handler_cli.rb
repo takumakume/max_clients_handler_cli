@@ -55,7 +55,7 @@ def __main__(argv)
 
   when "delete"
     if MaxClientsHandlerCli.delete opts
-      MaxClientsHandlerCli.clear_counter
+      MaxClientsHandlerCli.clear_counter opts
       puts "MaxClientsHandlerCli: delete: successful"
     else
       puts "MaxClientsHandlerCli: delete: execute failed"
