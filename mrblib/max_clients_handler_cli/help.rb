@@ -6,24 +6,24 @@ module MaxClientsHandlerCli
 Usage:
 
   # get: Show config from yaml config store
-  $ max_clients_handler_cli -m get [KEY]
-  $ max_clients_handler_cli -m get /path/to/hoge.php
+  $ max_clients_handler_cli -m get -k [KEY]
+  $ max_clients_handler_cli -m get -k /path/to/hoge.php
 
   # get_all: Show all config keys from yaml config store (show with value add option `--full`)
   $ max_clients_handler_cli -m get_all
   $ max_clients_handler_cli -m get_all --full
 
   # set: Set config from yaml after apply localmemcache
-  $ max_clients_handler_cli -m set [KEY] -c [max_clients] -t [timeslots]
-  $ max_clients_handler_cli -m get /path/to/hoge.php -c 10 -t 1200-1500,2030-2359
+  $ max_clients_handler_cli -m set -k [KEY] -c [max_clients] -t [timeslot(,timeslot)]
+  $ max_clients_handler_cli -m set -k /path/to/hoge.php -c 10 -t 1200-1500,2030-2359
 
   # delete: Delete config from yaml after apply localmemcache
-  $ max_clients_handler_cli -m delete [KEY]
-  $ max_clients_handler_cli -m delete /path/to/hoge.php
+  $ max_clients_handler_cli -m delete -k [KEY]
+  $ max_clients_handler_cli -m delete -k /path/to/hoge.php
 
   # lmc_get: Show config from direct localmemcache config store
-  $ max_clients_handler_cli -m lmc_get [KEY]
-  $ max_clients_handler_cli -m lmc_get /path/to/hoge.php
+  $ max_clients_handler_cli -m lmc_get -k [KEY]
+  $ max_clients_handler_cli -m lmc_get -k /path/to/hoge.php
 
   # apply: Apply config yaml -> localmemcache
   $ max_clients_handler_cli -m apply
