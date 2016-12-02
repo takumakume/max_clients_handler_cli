@@ -14,7 +14,7 @@ module MaxClientsHandlerCli
     def initialize
       self.load_config Config::CONFIG_PATH
 
-      @@config["config_store_lmc"] = "/access_limiter/max_clients_hander.lmc" unless @@config.has_key?("config_store_lmc")
+      @@config["config_store_lmc"] = "/var/run/max_clients_hander.lmc" unless @@config.has_key?("config_store_lmc")
       unless File.exists?(@@config["config_store_lmc"])
         begin
           Cache.new :filename => @@config["config_store_lmc"]
@@ -24,7 +24,7 @@ module MaxClientsHandlerCli
         end
       end
 
-      @@config["config_store_yaml"] = "/access_limiter/max_clients_hander.yaml" unless @@config.has_key?("config_store_yaml")
+      @@config["config_store_yaml"] = "/etc/max_clients_hander.yaml" unless @@config.has_key?("config_store_yaml")
       unless File.exists?(@@config["config_store_yaml"])
         begin
           File.open(@@config["config_store_yaml"], "w")
